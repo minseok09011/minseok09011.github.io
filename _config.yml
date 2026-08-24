@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Minseok OH # the website title (if blank, full name will be used instead)
+title: Minseok Oh # the website title (if blank, full name will be used instead)
 first_name: Minseok
 middle_name: R.
 last_name: Oh
@@ -97,8 +97,10 @@ al_folio:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: false
-bib_search: true # in-page "type to filter" box on the publications list (independent of search_enabled)
+search_enabled: true
+socials_in_search: true
+posts_in_search: true
+bib_search: true
 
 # Dimensions
 max_width: 930px
@@ -199,6 +201,8 @@ newsletter:
 collections:
   books:
     output: true
+  projects:
+    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -282,6 +286,7 @@ plugins:
   - al_citations
   - al_ext_posts
   - al_img_tools
+  - al_search
   - al_charts
   - al_math
   - al_comments
@@ -344,8 +349,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Oh]
-  first_name: [Minseok]
+  last_name: [Einstein]
+  first_name: [Albert, A.]
 
   style: apa
   locale: en
@@ -374,7 +379,7 @@ enable_publication_badges:
   altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
   dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
   google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
-  inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
+  inspirehep: true # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
