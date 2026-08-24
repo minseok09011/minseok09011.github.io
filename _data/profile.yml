@@ -34,16 +34,16 @@ portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
 
 education:
-- name: Inha University
+- name: Inha University 
   position: >-
     Smart Mobility Engineering <br/>
     B.S. (in progress)
-  date: ""
+  date: 2021.03 ~
 
-# experience:
-# - name: Company/Lab Name
-#   position: Role
-#   date: Start - End
+ experience:
+ - name: APRL(Autonomy and Perceptual Robotics Lab), DGIST
+   position: Research Intern
+   date: 2026.07 ~ 2026.08
 
 # awards:
 # - name: Award Name
