@@ -1,63 +1,38 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
+# Hello! This is where you manage which Jekyll version is used to run.
+# When you want to use a different version, change it below, save the
+# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+#
+#     bundle exec jekyll serve
+#
+# This will help ensure the proper Jekyll version is running.
+# Happy Jekylling!
+gem "jekyll", "~> 3.9"
 
-# Core plugins that directly affect site building
+# This is the default theme for new Jekyll sites. You may change this to anything you like.
+# gem "minima", "~> 2.0"
+
+# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
+# uncomment the line below. To upgrade, run `bundle update github-pages`.
+# gem "github-pages", group: :jekyll_plugins
+
+# If you have any plugins, put them here!
 group :jekyll_plugins do
-    gem 'jekyll-3rd-party-libraries'
-    gem 'jekyll-archives-v2'
-    gem 'jekyll-cache-bust'
-    gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
-    gem 'jekyll-get-json'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
-    gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
-    gem 'jekyll-regex-replace'
-    gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-socials'
-    gem 'jekyll-tabs'
-    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
-    gem 'jekyll-toc'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
-
-    gem 'classifier-reborn'  # used for content categorization during the build
+  gem "jekyll-email-protect"
 end
 
-# Gems for development or external data fetching (outside :jekyll_plugins)
-group :other_plugins do
-    gem 'css_parser'
-    gem 'observer'       # used by jekyll-scholar
-    gem 'ostruct'        # used by jekyll-twitter-plugin
-    # gem 'terser'         # used by jekyll-terser
-    # gem 'unicode_utils' -- should be already installed by jekyll
-    # gem 'webrick' -- should be already installed by jekyll
-end
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Gems for al-folio plugins
-group :al_folio_plugins do
-    gem 'al_folio_core', '= 1.0.15'
-    gem 'al_icons', '= 1.0.0'
-    gem 'al_folio_cv', '= 1.0.2'
-    gem 'al_folio_distill', '= 1.0.3'
-    gem 'al_folio_upgrade', '= 1.0.3'
-    gem 'al_folio_bootstrap_compat', '= 1.0.0'
-    gem 'al_cookie', '= 1.0.1'
+# Performance-booster for watching directories on Windows
+# Version updated to 0.2: https://github.com/luost26/academic-homepage/issues/23
+gem "wdm", "~> 0.2" if Gem.win_platform?
 
-    gem 'al_analytics', '= 1.0.2'
-    gem 'al_citations', '= 1.0.1'
-    gem 'al_ext_posts', '= 1.0.3'
-    gem 'al_img_tools', '= 1.0.3'
-    gem 'al_charts', '= 1.0.1'
-    gem 'al_math', '= 1.0.2'
-    gem 'al_comments', '= 1.0.0'
-    gem 'al_newsletter', '= 1.0.0'
+gem "webrick", "~> 1.7"
+gem "kramdown-parser-gfm"
 
-    gem 'al_email_protect', '= 1.0.1'
-    gem 'al_marimo', '= 1.0.0'
-    gem 'al_rtl', '= 1.0.0'
-end
+# Ruby 3.4+ no longer bundles these by default; jekyll 3.x's dependencies need them.
+gem "base64"
+gem "logger"
+gem "bigdecimal"
